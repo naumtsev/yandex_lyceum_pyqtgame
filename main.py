@@ -144,6 +144,7 @@ class Game(QMainWindow):
             a.move(200 + 20 * i, 100)
             a.show()
             self.btn_show.append(a)
+        self.now_hod = 0
         self.game_status.setText('Ходит ' + self.people[self.now_hod] + ' игрок')
         self.now_bad = 0
         self.stop_game = False
@@ -153,6 +154,7 @@ class Game(QMainWindow):
             self.btn_show[i].setStyleSheet("background-color: ")
         for i in self.btn:
             i.setStyleSheet("background-color: " + BTN_COLOR)
+
 
     def check_lost(self):
        if self.now_bad >= self.level:
